@@ -20,6 +20,13 @@
 		2545CB642A199B9D003CF56C /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB632A199B9D003CF56C /* GlobalModel.swift */; };
 		2545CB682A199F4B003CF56C /* GenericDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB672A199F4B003CF56C /* GenericDataProvider.swift */; };
 		2545CB6D2A199FA5003CF56C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB6C2A199FA5003CF56C /* API.swift */; };
+		2545CB6F2A19A5E8003CF56C /* GenericStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB6E2A19A5E8003CF56C /* GenericStore.swift */; };
+		2545CB712A19DD67003CF56C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB702A19DD67003CF56C /* Extensions.swift */; };
+		2545CB732A19DFC2003CF56C /* CoinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB722A19DFC2003CF56C /* CoinRouter.swift */; };
+		2545CB752A19DFDE003CF56C /* GlobalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB742A19DFDE003CF56C /* GlobalRouter.swift */; };
+		2545CB772A19E914003CF56C /* CoinStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB762A19E913003CF56C /* CoinStore.swift */; };
+		2545CB792A19E920003CF56C /* GlobalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB782A19E920003CF56C /* GlobalStore.swift */; };
+		2545CB7C2A1B11B9003CF56C /* ListCoinDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB7B2A1B11B9003CF56C /* ListCoinDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,13 @@
 		2545CB632A199B9D003CF56C /* GlobalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
 		2545CB672A199F4B003CF56C /* GenericDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataProvider.swift; sourceTree = "<group>"; };
 		2545CB6C2A199FA5003CF56C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2545CB6E2A19A5E8003CF56C /* GenericStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStore.swift; sourceTree = "<group>"; };
+		2545CB702A19DD67003CF56C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2545CB722A19DFC2003CF56C /* CoinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRouter.swift; sourceTree = "<group>"; };
+		2545CB742A19DFDE003CF56C /* GlobalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalRouter.swift; sourceTree = "<group>"; };
+		2545CB762A19E913003CF56C /* CoinStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStore.swift; sourceTree = "<group>"; };
+		2545CB782A19E920003CF56C /* GlobalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStore.swift; sourceTree = "<group>"; };
+		2545CB7B2A1B11B9003CF56C /* ListCoinDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoinDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,7 @@
 				2545CB4D2A188D25003CF56C /* Assets.xcassets */,
 				2545CB4F2A188D25003CF56C /* LaunchScreen.storyboard */,
 				2545CB522A188D25003CF56C /* Info.plist */,
+				2545CB702A19DD67003CF56C /* Extensions.swift */,
 			);
 			path = MarketCoin;
 			sourceTree = "<group>";
@@ -94,6 +109,7 @@
 		2545CB592A188DE5003CF56C /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				2545CB7A2A1B1197003CF56C /* CoinsDataProvider */,
 				2545CB662A199F0A003CF56C /* NetworkRepository */,
 				2545CB672A199F4B003CF56C /* GenericDataProvider.swift */,
 			);
@@ -133,6 +149,8 @@
 		2545CB6A2A199F81003CF56C /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				2545CB722A19DFC2003CF56C /* CoinRouter.swift */,
+				2545CB742A19DFDE003CF56C /* GlobalRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -140,8 +158,19 @@
 		2545CB6B2A199F89003CF56C /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				2545CB6E2A19A5E8003CF56C /* GenericStore.swift */,
+				2545CB762A19E913003CF56C /* CoinStore.swift */,
+				2545CB782A19E920003CF56C /* GlobalStore.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		2545CB7A2A1B1197003CF56C /* CoinsDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				2545CB7B2A1B11B9003CF56C /* ListCoinDataProvider.swift */,
+			);
+			path = CoinsDataProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,9 +247,16 @@
 				2545CB602A199A49003CF56C /* MarketChartModel.swift in Sources */,
 				2545CB5C2A188F0E003CF56C /* CoinModel.swift in Sources */,
 				2545CB622A199AEF003CF56C /* GraphicDataModel.swift in Sources */,
+				2545CB772A19E914003CF56C /* CoinStore.swift in Sources */,
+				2545CB752A19DFDE003CF56C /* GlobalRouter.swift in Sources */,
+				2545CB6F2A19A5E8003CF56C /* GenericStore.swift in Sources */,
+				2545CB732A19DFC2003CF56C /* CoinRouter.swift in Sources */,
+				2545CB7C2A1B11B9003CF56C /* ListCoinDataProvider.swift in Sources */,
 				2545CB492A188D25003CF56C /* ViewController.swift in Sources */,
 				2545CB6D2A199FA5003CF56C /* API.swift in Sources */,
 				2545CB452A188D25003CF56C /* AppDelegate.swift in Sources */,
+				2545CB792A19E920003CF56C /* GlobalStore.swift in Sources */,
+				2545CB712A19DD67003CF56C /* Extensions.swift in Sources */,
 				2545CB5E2A18941D003CF56C /* CurrentDataModel.swift in Sources */,
 				2545CB642A199B9D003CF56C /* GlobalModel.swift in Sources */,
 				2545CB682A199F4B003CF56C /* GenericDataProvider.swift in Sources */,

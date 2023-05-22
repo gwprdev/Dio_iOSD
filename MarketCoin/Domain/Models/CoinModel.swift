@@ -11,22 +11,26 @@ import Foundation
 struct CoinModel: Codable {
     let id, symbol, name: String
     let image: String
-    let currentPrice: Double?, marketCap: Double?
+    let currentPrice: Double?
+    let marketCap: Double?
     let marketCapRank: Int?
     let fullyDilutedValuation: Double?
-    let totalVolume: Double?, high24H: Double?, low24H: Double?
-    let priceChange24H: Double?, priceChangePercentage24H: Double?
+    let totalVolume: Double?
+    let high24H: Double?
+    let low24H: Double?
+    let priceChange24H: Double?
+    let priceChangePercentage24H: Double?
     let marketCapChange24H: Double?
     let marketCapChangePercentage24H: Double?
     let circulatingSupply: Double?
     let totalSupply: Double?
     let maxSupply: Double?
-    let ath: String?
+    let ath: Double?
     let athChangePercentage: Double?
-    let athDate: String?
-    let atl, atlChangePercentage: String?
-    let atlDate: String?
-    let lastUpdated: String?
+    let athDate: String
+    let atl, atlChangePercentage: Double?
+    let atlDate: String
+    let lastUpdated: String
     let priceChangePercentage1H: Double?
     let priceChangePercentage7D: Double?
     let priceChangePercentage14D: Double?
