@@ -27,6 +27,15 @@
 		2545CB772A19E914003CF56C /* CoinStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB762A19E913003CF56C /* CoinStore.swift */; };
 		2545CB792A19E920003CF56C /* GlobalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB782A19E920003CF56C /* GlobalStore.swift */; };
 		2545CB7C2A1B11B9003CF56C /* ListCoinDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB7B2A1B11B9003CF56C /* ListCoinDataProvider.swift */; };
+		2545CB7F2A1DB213003CF56C /* GlobalValuesDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB7E2A1DB213003CF56C /* GlobalValuesDataProvider.swift */; };
+		2545CB882A1DB5D3003CF56C /* CoinsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB822A1DB5D3003CF56C /* CoinsListPresenter.swift */; };
+		2545CB892A1DB5D3003CF56C /* CoinsListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB832A1DB5D3003CF56C /* CoinsListWorker.swift */; };
+		2545CB8A2A1DB5D3003CF56C /* CoinsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB842A1DB5D3003CF56C /* CoinsListRouter.swift */; };
+		2545CB8B2A1DB5D3003CF56C /* CoinsListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB852A1DB5D3003CF56C /* CoinsListModels.swift */; };
+		2545CB8C2A1DB5D3003CF56C /* CoinsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB862A1DB5D3003CF56C /* CoinsListViewController.swift */; };
+		2545CB8D2A1DB5D3003CF56C /* CoinsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB872A1DB5D3003CF56C /* CoinsListInteractor.swift */; };
+		2545CB8F2A1DBC68003CF56C /* GlobalValuesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB8E2A1DBC68003CF56C /* GlobalValuesWorker.swift */; };
+		2545CB912A1DBCD4003CF56C /* CriptocurrenciesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2545CB902A1DBCD4003CF56C /* CriptocurrenciesError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +61,15 @@
 		2545CB762A19E913003CF56C /* CoinStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStore.swift; sourceTree = "<group>"; };
 		2545CB782A19E920003CF56C /* GlobalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStore.swift; sourceTree = "<group>"; };
 		2545CB7B2A1B11B9003CF56C /* ListCoinDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoinDataProvider.swift; sourceTree = "<group>"; };
+		2545CB7E2A1DB213003CF56C /* GlobalValuesDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalValuesDataProvider.swift; sourceTree = "<group>"; };
+		2545CB822A1DB5D3003CF56C /* CoinsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListPresenter.swift; sourceTree = "<group>"; };
+		2545CB832A1DB5D3003CF56C /* CoinsListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListWorker.swift; sourceTree = "<group>"; };
+		2545CB842A1DB5D3003CF56C /* CoinsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListRouter.swift; sourceTree = "<group>"; };
+		2545CB852A1DB5D3003CF56C /* CoinsListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListModels.swift; sourceTree = "<group>"; };
+		2545CB862A1DB5D3003CF56C /* CoinsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListViewController.swift; sourceTree = "<group>"; };
+		2545CB872A1DB5D3003CF56C /* CoinsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListInteractor.swift; sourceTree = "<group>"; };
+		2545CB8E2A1DBC68003CF56C /* GlobalValuesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalValuesWorker.swift; sourceTree = "<group>"; };
+		2545CB902A1DBCD4003CF56C /* CriptocurrenciesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptocurrenciesError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +111,7 @@
 				2545CB4F2A188D25003CF56C /* LaunchScreen.storyboard */,
 				2545CB522A188D25003CF56C /* Info.plist */,
 				2545CB702A19DD67003CF56C /* Extensions.swift */,
+				2545CB902A1DBCD4003CF56C /* CriptocurrenciesError.swift */,
 			);
 			path = MarketCoin;
 			sourceTree = "<group>";
@@ -100,6 +119,7 @@
 		2545CB582A188DC9003CF56C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2545CB802A1DB34D003CF56C /* Scene */,
 				2545CB5A2A188E05003CF56C /* Models */,
 				2545CB592A188DE5003CF56C /* DataProvider */,
 			);
@@ -109,6 +129,7 @@
 		2545CB592A188DE5003CF56C /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				2545CB7D2A1DB1D8003CF56C /* GlobalValuesDataProvider */,
 				2545CB7A2A1B1197003CF56C /* CoinsDataProvider */,
 				2545CB662A199F0A003CF56C /* NetworkRepository */,
 				2545CB672A199F4B003CF56C /* GenericDataProvider.swift */,
@@ -171,6 +192,36 @@
 				2545CB7B2A1B11B9003CF56C /* ListCoinDataProvider.swift */,
 			);
 			path = CoinsDataProvider;
+			sourceTree = "<group>";
+		};
+		2545CB7D2A1DB1D8003CF56C /* GlobalValuesDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				2545CB7E2A1DB213003CF56C /* GlobalValuesDataProvider.swift */,
+			);
+			path = GlobalValuesDataProvider;
+			sourceTree = "<group>";
+		};
+		2545CB802A1DB34D003CF56C /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2545CB812A1DB353003CF56C /* CoinsList */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		2545CB812A1DB353003CF56C /* CoinsList */ = {
+			isa = PBXGroup;
+			children = (
+				2545CB822A1DB5D3003CF56C /* CoinsListPresenter.swift */,
+				2545CB832A1DB5D3003CF56C /* CoinsListWorker.swift */,
+				2545CB842A1DB5D3003CF56C /* CoinsListRouter.swift */,
+				2545CB852A1DB5D3003CF56C /* CoinsListModels.swift */,
+				2545CB862A1DB5D3003CF56C /* CoinsListViewController.swift */,
+				2545CB872A1DB5D3003CF56C /* CoinsListInteractor.swift */,
+				2545CB8E2A1DBC68003CF56C /* GlobalValuesWorker.swift */,
+			);
+			path = CoinsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,21 +296,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				2545CB602A199A49003CF56C /* MarketChartModel.swift in Sources */,
+				2545CB882A1DB5D3003CF56C /* CoinsListPresenter.swift in Sources */,
 				2545CB5C2A188F0E003CF56C /* CoinModel.swift in Sources */,
+				2545CB8C2A1DB5D3003CF56C /* CoinsListViewController.swift in Sources */,
 				2545CB622A199AEF003CF56C /* GraphicDataModel.swift in Sources */,
 				2545CB772A19E914003CF56C /* CoinStore.swift in Sources */,
 				2545CB752A19DFDE003CF56C /* GlobalRouter.swift in Sources */,
+				2545CB892A1DB5D3003CF56C /* CoinsListWorker.swift in Sources */,
 				2545CB6F2A19A5E8003CF56C /* GenericStore.swift in Sources */,
 				2545CB732A19DFC2003CF56C /* CoinRouter.swift in Sources */,
 				2545CB7C2A1B11B9003CF56C /* ListCoinDataProvider.swift in Sources */,
+				2545CB8A2A1DB5D3003CF56C /* CoinsListRouter.swift in Sources */,
 				2545CB492A188D25003CF56C /* ViewController.swift in Sources */,
+				2545CB7F2A1DB213003CF56C /* GlobalValuesDataProvider.swift in Sources */,
 				2545CB6D2A199FA5003CF56C /* API.swift in Sources */,
+				2545CB8D2A1DB5D3003CF56C /* CoinsListInteractor.swift in Sources */,
+				2545CB8F2A1DBC68003CF56C /* GlobalValuesWorker.swift in Sources */,
 				2545CB452A188D25003CF56C /* AppDelegate.swift in Sources */,
 				2545CB792A19E920003CF56C /* GlobalStore.swift in Sources */,
 				2545CB712A19DD67003CF56C /* Extensions.swift in Sources */,
 				2545CB5E2A18941D003CF56C /* CurrentDataModel.swift in Sources */,
 				2545CB642A199B9D003CF56C /* GlobalModel.swift in Sources */,
 				2545CB682A199F4B003CF56C /* GenericDataProvider.swift in Sources */,
+				2545CB8B2A1DB5D3003CF56C /* CoinsListModels.swift in Sources */,
+				2545CB912A1DBCD4003CF56C /* CriptocurrenciesError.swift in Sources */,
 				2545CB472A188D25003CF56C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

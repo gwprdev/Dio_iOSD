@@ -19,7 +19,7 @@ struct CryptocurrencyModel: Codable {
     let endedIcos: Int // terminou os icos
     let markets: Int // mercados
     let totalMarketCap: [String: Double] // Valor total de Mercado por moeda
-    let totalVomume: [String: String] // Volume total por moeda
+    let totalVolume: [String: Double] // Volume total por moeda
     let marketCapPercentage: [String: Double] // Porcentagem de capitalização de mercado por moeda
     let marketCapChangePercentage24HUsd: Double // Porcentagem de alteração de mercado 24h em dolar
     let updateAt: Int // dara atualização em timestemp
@@ -31,7 +31,7 @@ struct CryptocurrencyModel: Codable {
         case endedIcos = "ended_icos"
         case markets
         case totalMarketCap = "total_market_cap"
-        case totalVomume = "total_vomume"
+        case totalVolume = "total_volume"
         case marketCapPercentage = "market_cap_percentage"
         case marketCapChangePercentage24HUsd = "market_cap_change_percentage_24h_usd"
         case updateAt = "update_at"
