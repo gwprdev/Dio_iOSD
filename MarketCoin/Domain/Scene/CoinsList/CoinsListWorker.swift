@@ -56,4 +56,5 @@ extension CoinsListWorker: ListCoinDataProviderDelegate {
             completion(.failure(.undefinedError))
         }
         
+    }
 }

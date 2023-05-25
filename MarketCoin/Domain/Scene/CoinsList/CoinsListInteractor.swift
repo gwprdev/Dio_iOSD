@@ -40,8 +40,9 @@ class CoinsListInteractor: CoinsListBusinessLogic, CoinsListDataStore{
         globalValuesWorker?.doFetchGlobalValues(completion: { result in
             switch result {
             case .success(let globalModel):
-                self.createGlobalValuesResponse(baseCoin: request.baseCoin, global: GlobalModel)
+                self.createGlobalValuesResponse(baseCoin: request.baseCoin, global: globalModel)
             case .failure(let error):
+                self.presenter?.presetError(error: error)
                 
             }
         })
@@ -61,20 +62,24 @@ class CoinsListInteractor: CoinsListBusinessLogic, CoinsListDataStore{
             case .success(let listCoinsModel):
                 self.createListCoinsResponse(request: request, listCoins: listCoinsModel)
             case .failure(let error):
+                self.presenter?.presetError(error: error)
+                
             }
         })
     }
     
     private func createGlobalValuesResponse(baseCoin: String, global: GlobalModel?){
-        if let globalModel {
-            let totalMarketCap = globalModel.data.totalMarketCap.filter { $0.key == baseCoin }
-            let totalVolume = globalModel.data.totalVolume.filter { $0.key == baseCoin }
+        if let global {
+            let totalMarketCap = global.data.totalMarketCap.filter { $0.key == baseCoin }
+            let totalVolume = global.data.totalVolume.filter { $0.key == baseCoin }
             let response = CoinsList.FetchGlobalValues.Response(baseCoin: baseCoin,
                                                                 totalMarkeCap: totalMarketCap,
                                                                 totalVolume: totalVolume)
             
+            presenter?.presentGlobalValeus(response: response)
+
         }else{
-            print("aaaaaaa")
+            self.presenter?.presetError(error: .undefinedError)
         }
     }
     
@@ -112,12 +117,16 @@ class CoinsListInteractor: CoinsListBusinessLogic, CoinsListDataStore{
                                                                  marketCapRank: coin.marketCapRank,
                                                                  priceChangePercentage: priceChangePercentage(pricePercentage: request.pricePercentage, coin: coin))
                     
+                    }
+                    presenter?.presentListCoins(response: response)
+                }else{
+                    self.presenter?.presetError(error: .undefinedError)
                 }
-
-                }
-                
+                return 0.0
             }
         }
+    
+    
     }
     
 
